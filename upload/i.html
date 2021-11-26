@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 500px;
+        height: 500px;
+      }
+      td {
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <script>
+      //通过标签名找到td 返回一个数组
+      var td = document.getElementsByTagName("td");
+      //定义循环取到每一个td元素
+      for (let i = 0; i < 9; i++) {
+        //鼠标移到上面背景变成红色
+        td[i].onmouseover = function () {
+          td[i].style.backgroundColor = "red";
+        };
+        //鼠标移出变成白色
+        td[i].onmouseout = function () {
+          td[i].style.backgroundColor = "white";
+        };
+      }
+    </script>
+  </body>
+</html>
